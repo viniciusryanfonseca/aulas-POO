@@ -1,21 +1,81 @@
-package com.mycompany.mavenproject2;
+package com.mycompany.pessoa;
 
 public class Pessoa {
+
     private String nome;
-    private int idade;
-    private String email;
+    private double altura;
+    private String cpf;
+    private int peso;
     
-    public Pessoa(String nome, int idade, String email){
+    public Pessoa(){
+    
+    }
+    
+    public Pessoa(String nome, String cpf, double altura, int peso){
         this.nome = nome;
-        this.idade = idade; 
-        this.email = email;
+        this.cpf = cpf;
+        this.altura = altura;
+        this.peso = peso;
     }
-        public void apresentar() {
-        System.out.println(" Ola, seu nome e " + nome);
-        System.out.println(" sua idade e " + idade);
-        System.out.println(" seu email e " + email);
-        int prox_aniv = idade + 1;
-        System.out.println(" seu proximo aniversario sera de " + prox_aniv);
+
+    /**
+     * @return the nome
+     */
+    public String getNome() {
+        return nome;
     }
-        
+
+    /**
+     * @param nome the nome to set
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     * @return the altura
+     */
+    public double getAltura() {
+        return altura;
+    }
+
+    /**
+     * @param altura the altura to set
+     */
+    public void setAltura(double altura) {
+        this.altura = altura;
+    }
+
+    /**
+     * @return the cpf
+     */
+    public String getCpf() {
+        return cpf;
+    }
+
+    /**
+     * @param cpf the cpf to set
+     */
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    /**
+     * @return the peso
+     */
+    public int getPeso() {
+        return peso;
+    }
+
+    /**
+     * @param peso the peso to set
+     */
+    public void setPeso(int peso) {
+        this.peso = peso;
+    }
+    public void exibirIMC(){
+    double imc = peso / (altura * altura);
+    System.out.println("seu IMC e: " + imc);
+    
+    }
 }
