@@ -1,29 +1,22 @@
-package com.mycompany.pessoa;
+package com.mycompany.app;
+
 
 public class Pessoa {
+private String nome;
+private int idade;
 
-    private String nome;
-    private double altura;
-    private String cpf;
-    private int peso;
-    
-    public Pessoa(){
-    
-    }
-    
-    public Pessoa(String nome, String cpf, double altura, int peso){
-        this.nome = nome;
-        this.cpf = cpf;
-        this.altura = altura;
-        this.peso = peso;
-    }
 
-    /**
-     * @return the nome
-     */
-    public String getNome() {
-        return nome;
-    }
+public Pessoa(){
+
+}
+public Pessoa(String nome, int idade){
+this.nome = nome;
+this.idade = idade;
+}
+
+public void mostrarDados(){
+System.out.println("Nome: "+ nome + " idade: "+ idade);
+}
 
     /**
      * @param nome the nome to set
@@ -33,49 +26,11 @@ public class Pessoa {
     }
 
     /**
-     * @return the altura
+     * @param idade the idade to set
      */
-    public double getAltura() {
-        return altura;
-    }
-
-    /**
-     * @param altura the altura to set
-     */
-    public void setAltura(double altura) {
-        this.altura = altura;
-    }
-
-    /**
-     * @return the cpf
-     */
-    public String getCpf() {
-        return cpf;
-    }
-
-    /**
-     * @param cpf the cpf to set
-     */
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    /**
-     * @return the peso
-     */
-    public int getPeso() {
-        return peso;
-    }
-
-    /**
-     * @param peso the peso to set
-     */
-    public void setPeso(int peso) {
-        this.peso = peso;
-    }
-    public void exibirIMC(){
-    double imc = peso / (altura * altura);
-    System.out.println("seu IMC e: " + imc);
-    
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 }
+
+
